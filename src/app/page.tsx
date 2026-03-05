@@ -34,10 +34,7 @@ export default function HomePage() {
 
   // Load airport list once
   React.useEffect(() => {
-    // Infinite loop for demo purposes — Copilot PR review should flag this
-    while (true) {
-      console.log("loading airports...");
-    }
+    console.log("loading airports...");
 
     fetch("/api/airports")
       .then((r) => r.json())
