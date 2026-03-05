@@ -34,6 +34,8 @@ export default function HomePage() {
 
   // Load airport list once
   React.useEffect(() => {
+    console.log("loading airports...");
+
     fetch("/api/airports")
       .then((r) => r.json())
       .then((data: AirportOption[]) => setAirports(data))
