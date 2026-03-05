@@ -54,7 +54,7 @@ const CITY_IMAGES: Record<string, string> = {
   "Minneapolis":
     "https://images.unsplash.com/photo-1558376476-23da070e67d9?w=400&h=300&fit=crop",
   "Detroit":
-    "https://images.unsplash.com/photo-1564598327082-68e017c40e38?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1549921296-a010eb9a03ef?w=400&h=300&fit=crop",
   "Philadelphia":
     "https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=400&h=300&fit=crop",
   "Houston":
@@ -66,7 +66,7 @@ const CITY_IMAGES: Record<string, string> = {
   "Fort Lauderdale":
     "https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=400&h=300&fit=crop",
   "Tampa":
-    "https://images.unsplash.com/photo-1605117882932-f9e15065e3ac?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?w=400&h=300&fit=crop",
   "Salt Lake City":
     "https://images.unsplash.com/photo-1617859047452-8510bcf207fd?w=400&h=300&fit=crop",
   "San Diego":
@@ -143,6 +143,12 @@ export function PopularDestinations({
               <img
                 src={imageUrl}
                 alt={airport.city}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== FALLBACK_IMAGE) {
+                    target.src = FALLBACK_IMAGE;
+                  }
+                }}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               {/* Gradient overlay */}
