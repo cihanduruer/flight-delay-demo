@@ -167,7 +167,7 @@ export function PopularDestinations({
                 <div className="absolute top-1.5 right-1.5">
                   <Badge
                     variant={BUSIEST_AIRPORTS[airport.id].hub === "large" ? "default" : "secondary"}
-                    className="text-[9px] px-1.5 py-0 gap-0.5"
+                    className="text-[18px] px-3 py-0.5 gap-1"
                   >
                     ✈ #{BUSIEST_AIRPORTS[airport.id].rank}
                   </Badge>
