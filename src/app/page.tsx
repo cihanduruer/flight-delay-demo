@@ -94,6 +94,7 @@ export default function HomePage() {
           <h1 className="text-2xl font-bold tracking-tight">
             Flight Delay Checker
           </h1>
+          <pre className="text-xs font-mono" aria-hidden="true">{`     __|__\n--@--@--(_)--@--@--`}</pre>
           <p className="text-muted-foreground text-sm">
             See the chance your flight arrives ≥ 15 minutes late, based on 2013
             US flight data.
