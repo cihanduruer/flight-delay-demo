@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { WEEKDAY_NAMES, jsWeekdayToDataset } from "@/lib/constants";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 interface DelayResult {
   probability: number;
@@ -92,15 +93,18 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex items-start justify-center p-8 bg-background">
       <div className="w-full max-w-5xl space-y-6">
-        <div className="space-y-1">
-          <h1 className="text-2xl font-bold tracking-tight">
-            Flight Delay Checker
-          </h1>
-          <pre className="text-xs font-mono" aria-hidden="true">{`     __|__\n--@--@--(_)--@--@--`}</pre>
-          <p className="text-muted-foreground text-sm">
-            See the chance your flight arrives ≥ 15 minutes late, based on 2013
-            US flight data.
-          </p>
+        <div className="flex items-start justify-between">
+          <div className="space-y-1">
+            <h1 className="text-2xl font-bold tracking-tight">
+              Flight Delay Checker
+            </h1>
+            <pre className="text-xs font-mono" aria-hidden="true">{`     __|__\n--@--@--(_)--@--@--`}</pre>
+            <p className="text-muted-foreground text-sm">
+              See the chance your flight arrives ≥ 15 minutes late, based on 2013
+              US flight data.
+            </p>
+          </div>
+          <ThemeToggle />
         </div>
 
         {/* Popular destinations */}
