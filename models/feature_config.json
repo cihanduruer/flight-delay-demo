@@ -1,0 +1,20 @@
+{
+  "num_features": [
+    "Month",
+    "DayOfWeek",
+    "DepHour",
+    "carrier_delay_rate",
+    "origin_delay_rate",
+    "dest_delay_rate",
+    "route_delay_rate",
+    "route_flights"
+  ],
+  "cat_features": [
+    "TimeBucket",
+    "Season"
+  ],
+  "target": "ArrDel15",
+  "model_name": "Gradient Boosting",
+  "test_auc": 0.7178,
+  "baseline_auc": 0.5694113172265496
+}
